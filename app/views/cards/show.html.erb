@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @card.Name %>
+</p>
+
+<p>
+  <strong>Effect:</strong>
+  <%= @card.Effect %>
+</p>
+
+<p>
+  <strong>Set:</strong>
+  <%= @card.Set %>
+</p>
+
+<p>
+  <strong>Set number:</strong>
+  <%= @card.set_number %>
+</p>
+
+<%= link_to 'Edit', edit_card_path(@card) %> |
+<%= link_to 'Back', cards_path %>
