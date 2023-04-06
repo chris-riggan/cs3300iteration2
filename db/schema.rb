@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_31_205011) do
+ActiveRecord::Schema.define(version: 2023_04_03_182724) do
 
-  create_table "cards", force: :cascade do |t|
+  create_table "mtg_cards", force: :cascade do |t|
     t.string "Name"
-    t.text "Effect"
     t.string "Set"
-    t.integer "set_number"
+    t.integer "Set_Number"
+    t.integer "Quantity"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

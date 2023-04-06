@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<h1>MTG Card Tracker</h1>
+
+<div class="row justify-content-center">
+    <div class="col-auto">
+      <table class="table table-responsive">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Set</th>
+            <th>Set number</th>
+            <th>Quantity</th>
+            <th colspan="5"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @mtg_cards.each do |mtg_card| %>
+            <tr>
+              <td><%= mtg_card.Name %></td>
+              <td><%= mtg_card.Set %></td>
+              <td><%= mtg_card.Set_Number %></td>
+              <td><%= mtg_card.Quantity %></td>
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <td><button type="button" class="btn btn-dark"><%= link_to 'Show', mtg_card %></button></td>
+                <td><button type="button" class="btn btn-dark"><%= link_to 'Edit', edit_mtg_card_path(mtg_card) %></button></td>
+                <td><button type="button" class="btn btn-dark"><%= link_to 'Destroy', mtg_card, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+              </div>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+</div>
+<br>
+
+<div class="d-grid gap-2">
+  <button class="btn btn-dark" type="button"><%= link_to 'New Mtg Card', new_mtg_card_path %></button>
+</div
+
+

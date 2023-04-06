@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @mtg_card.Name %>
+</p>
+
+<p>
+  <strong>Set:</strong>
+  <%= @mtg_card.Set %>
+</p>
+
+<p>
+  <strong>Set number:</strong>
+  <%= @mtg_card.Set_Number %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @mtg_card.Quantity %>
+</p>
+
+<%= link_to 'Edit', edit_mtg_card_path(@mtg_card) %> |
+<%= link_to 'Back', mtg_cards_path %>

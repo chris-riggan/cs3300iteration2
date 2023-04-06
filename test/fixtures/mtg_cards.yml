@@ -2,12 +2,12 @@
 
 one:
   Name: MyString
-  Effect: MyText
   Set: MyString
-  set_number: 1
+  Set_Number: 1
+  Quantity: 1
 
 two:
   Name: MyString
-  Effect: MyText
   Set: MyString
-  set_number: 1
+  Set_Number: 1
+  Quantity: 1
