@@ -1,5 +1,6 @@
 require "rails_helper"
 describe "Card Attribute Requirements on Create", :type => :model do
+
   context "validation tests" do
 
     it "ensures the Name is present when creating card" do
