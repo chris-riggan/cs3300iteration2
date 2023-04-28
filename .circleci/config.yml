@@ -9,8 +9,7 @@ jobs:
       - checkout
       - run:
           name: rspec
-          command: sed -i 's/ruby "[0-9].[0-9].[0-9]"/ruby "3.0.2"/' Gemfile && bundle install && bundle exec rake db:migrate RAILS_ENV=test && bundle exec rspec
-          && yarn install && bundle exec rake webpacker:compile && bundle exec rspec
+          command: sed -i 's/ruby "[0-9].[0-9].[0-9]"/ruby "3.0.2"/' Gemfile && bundle install && bundle exec rake db:migrate RAILS_ENV=test && bundle exec rspec && yarn install && bundle exec rake webpacker:compile && bundle exec rspec
           environment: 
             NODE_ENV: test
 
