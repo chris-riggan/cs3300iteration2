@@ -4,33 +4,25 @@
 
 <div class="row justify-content-center">
     <div class="col-auto">
-      <table class="table table-responsive">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Set</th>
-            <th>Set number</th>
-            <th>Quantity</th>
-            <th colspan="5"></th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <% @mtg_cards.each do |mtg_card| %>
-            <tr>
-              <td><%= mtg_card.Name %></td>
-              <td><%= mtg_card.Set %></td>
-              <td><%= mtg_card.Set_Number %></td>
-              <td><%= mtg_card.Quantity %></td>
-              <div class="btn-group" role="group" aria-label="Basic example">
-                <td><button type="button" class="btn btn-dark"><%= link_to 'Show', mtg_card %></button></td>
-                <td><button type="button" class="btn btn-dark"><%= link_to 'Edit', edit_mtg_card_path(mtg_card) %></button></td>
-                <td><button type="button" class="btn btn-dark"><%= link_to 'Destroy', mtg_card, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+    <div class="row row-cols-1 row-cols-md-6 g-5">
+        <% @mtg_cards.each do |mtg_card| %>
+          <div class="col">
+            <div class="card" style="width: 18rem; background-color: rgb(29, 27, 27); ">
+              <div class="card-body">
+                <h5 class="card-title"><%= mtg_card.Name %></h5>
+                <h6>Card Set: <%= mtg_card.Set %></h6>
+                <h6>Card Number: <%= mtg_card.Set_Number %></h6>
+                <h6>Quantity: <%= mtg_card.Quantity %></h6>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-dark"><%= link_to 'Show', mtg_card %></button>
+                  <button type="button" class="btn btn-dark"><%= link_to 'Edit', edit_mtg_card_path(mtg_card) %></button>
+                  <button type="button" class="btn btn-dark"><%= link_to 'Destroy', mtg_card, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+                </div>
               </div>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
+            </div>
+          </div>     
+        <% end %>
+      </div>
     </div>
 </div>
 <br>
