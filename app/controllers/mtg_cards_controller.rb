@@ -1,6 +1,6 @@
 class MtgCardsController < ApplicationController
   before_action :set_mtg_card, only: %i[ show edit update destroy ]
-
+  before_action :authenticate_user!, only: %i[ new edit create update destroy]
   # GET /mtg_cards or /mtg_cards.json
   def index
     @mtg_cards = MtgCard.all
